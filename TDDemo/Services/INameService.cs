@@ -7,5 +7,6 @@ namespace TDDemo.Services
     public interface INameService
     {
         string GetMrName(string name);
+        string GetMrsName(string name);
     }
 }

@@ -10,5 +10,10 @@ namespace TDDemo.Services
         {
             return $"Mr. {name}";
         }
+
+        public string GetMrsName(string name)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

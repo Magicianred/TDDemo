@@ -22,5 +22,18 @@ namespace TDDemo.Tests
             // then
             Assert.Equal(expectedMrName, actualMrName);
         }
+
+        [Fact]
+        public void ShouldReturnMrsName()
+        {
+            string randomName = new RealNames(NameStyle.LastName).GetValue();
+            string inputName = randomName;
+            string expectedMrsName = $"Mrs. {randomName}";
+            var nameService = new NameService();
+
+            string actualMrsName = nameService.GetMrsName(inputName);
+
+            Assert.Equal(expectedMrsName, actualMrsName);
+        }
     }
 }
